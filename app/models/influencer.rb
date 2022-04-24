@@ -6,4 +6,8 @@ class Influencer < ApplicationRecord
   validates :followers, :handle, presence: true
   validates :profile_pic_url, :url => true
   validates :platform_id, uniqueness: { scope: :handle }
+
+  def primary_tag
+    Tag.find(primary_tag_id)
+  end
 end
