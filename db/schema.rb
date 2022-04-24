@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2022_04_24_170237) do
     t.string "profile_pic_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "primary_tag_id"
+    t.bigint "primary_tag_id", null: false
     t.index ["platform_id"], name: "index_influencers_on_platform_id"
   end
 
